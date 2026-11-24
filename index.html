@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="LUVORA PRODUCTION — Punjabi hip-hop, Hindi rap, AI-generated music and cinematic instrumentals.">
+  <title>LUVORA PRODUCTION — Sound Without Limits</title>
+  <style>
+    :root{--bg:#080808;--panel:#111;--gold:#d7b56d;--gold2:#f5df9c;--text:#f6f3ec;--muted:#aaa49a;--line:rgba(215,181,109,.23)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,8,8,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07)}
+    nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:900;letter-spacing:.16em;font-size:15px}.brand span{color:var(--gold)}
+    .navlinks{display:flex;gap:24px;color:#d1ccc2;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+    .navlinks a:hover,.textlink:hover{color:var(--gold2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border:1px solid var(--gold);font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:800;transition:.2s}
+    .btn.primary{background:var(--gold);color:#090909}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px #d7b56d20}
+    .hero{min-height:650px;display:flex;align-items:center;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+    .hero:before{content:"";position:absolute;width:620px;height:620px;border:1px solid #d7b56d20;border-radius:50%;right:-100px;top:30px;box-shadow:0 0 0 50px #d7b56d08,0 0 0 100px #d7b56d05}
+    .hero:after{content:"";position:absolute;width:360px;height:360px;right:30px;top:150px;border:1px solid #d7b56d44;transform:rotate(45deg);background:linear-gradient(135deg,#d7b56d12,transparent 60%)}
+    .hero-content{position:relative;z-index:1;max-width:720px;padding:90px 0}
+    .eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase}
+    h1{font-size:clamp(46px,8vw,94px);line-height:.98;letter-spacing:-.055em;margin:22px 0}
+    h1 span{color:var(--gold);display:block}
+    .hero p{max-width:550px;color:#bdb7ad;line-height:1.8;font-size:16px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .micro{margin-top:40px;color:#827c72;font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+    section{padding:88px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:34px}
+    .kicker{color:var(--gold);font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:800}
+    h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em;margin:10px 0 0}
+    .intro{color:var(--muted);line-height:1.7;max-width:470px;font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .tile{min-height:230px;background:linear-gradient(145deg,#171717,#0d0d0d);border:1px solid var(--line);padding:25px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+    .tile:after{content:"";position:absolute;right:-32px;top:-38px;width:130px;height:130px;border:1px solid #d7b56d2a;transform:rotate(45deg)}
+    .num{font-size:11px;color:var(--gold);letter-spacing:.2em}.tile h3{font-size:22px;margin:24px 0 8px}.tile p{color:var(--muted);font-size:13px;line-height:1.7;margin:0;max-width:270px}
+    .release{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;background:#101010;border:1px solid var(--line);padding:clamp(24px,5vw,54px)}
+    .art{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 42%,#6d5425 0,#201a10 25%,#0b0b0b 67%);border:1px solid #d7b56d50;position:relative;overflow:hidden}
+    .art:before,.art:after{content:"";position:absolute;border:1px solid #d7b56d50;width:70%;height:70%;transform:rotate(45deg)}
+    .art:after{width:48%;height:48%;transform:rotate(45deg)}
+    .art-label{z-index:1;font-size:clamp(24px,4vw,48px);font-weight:900;letter-spacing:.12em;text-shadow:0 4px 24px #000}
+    .release h3{font-size:32px;margin:14px 0}.release p{color:var(--muted);line-height:1.8;font-size:14px}
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}
+    .statement{font-size:clamp(27px,4vw,44px);line-height:1.2;letter-spacing:-.04em;margin:0}.statement span{color:var(--gold)}
+    .about-copy{color:var(--muted);line-height:1.9;font-size:14px}
+    .contact{border:1px solid var(--line);padding:clamp(28px,6vw,64px);text-align:center;background:radial-gradient(ellipse at top,#241d10,#0a0a0a 65%)}
+    .contact p{color:var(--muted);max-width:520px;margin:18px auto 26px;line-height:1.8}
+    footer{border-top:1px solid rgba(255,255,255,.08);padding:26px 0;color:#807a71;font-size:11px;letter-spacing:.08em}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.social{display:flex;gap:18px}
+    @media(max-width:760px){.navlinks{gap:12px;font-size:10px}.navlinks a:nth-child(2){display:none}.nav-cta{display:none}.hero{min-height:570px}.hero:before{right:-360px}.hero:after{right:-190px}.grid{grid-template-columns:1fr}.tile{min-height:190px}.release,.about{grid-template-columns:1fr}.release .art{max-width:420px;width:100%;margin:auto}.section-head{display:block}.intro{margin-top:16px}section{padding:66px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#home">LUVORA <span>PRODUCTION</span></a>
+    <div class="navlinks"><a href="#sound">Our sound</a><a href="#releases">Releases</a><a href="#about">About</a></div>
+    <a class="btn nav-cta" href="https://youtube.com/@luvoraforlife" target="_blank" rel="noopener">Listen on YouTube ↗</a>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-content">
+      <div class="eyebrow">Independent music • New-age sound</div>
+      <h1>SOUND<br><span>WITHOUT LIMITS.</span></h1>
+      <p>Punjabi hip-hop. Hindi rap. Cinematic instrumentals. A new wave of sound, built with imagination and made to move you.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://youtube.com/@luvoraforlife" target="_blank" rel="noopener">Explore our music ↗</a>
+        <a class="btn" href="#sound">Discover the sound</a>
+      </div>
+      <div class="micro">Original energy · Future-facing music · Luvora Production</div>
+    </div>
+  </section>
+  <section id="sound">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">The sound universe</div><h2>Different moods. One identity.</h2></div>
+        <p class="intro">From bass-heavy drops to atmospheric scores, explore the sounds shaping the Luvora universe.</p>
+      </div>
+      <div class="grid">
+        <article class="tile"><div class="num">01 / ENERGY</div><div><h3>Punjabi Hip-Hop</h3><p>Heavy bounce, bold attitude and a sound made for turning the volume up.</p></div></article>
+        <article class="tile"><div class="num">02 / WORDS</div><div><h3>Hindi Rap</h3><p>Sharp flows, honest emotions and stories that hit beyond the beat.</p></div></article>
+        <article class="tile"><div class="num">03 / CINEMA</div><div><h3>Cinematic BGM</h3><p>Epic builds, powerful atmosphere and soundtrack energy for big moments.</p></div></article>
+      </div>
+    </div>
+  </section>
+  <section id="releases">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">Now playing</div><h2>Enter the next wave.</h2></div></div>
+      <div class="release">
+        <div class="art"><div class="art-label">LV<br>PRODUCTION</div></div>
+        <div>
+          <div class="kicker">Latest music & releases</div>
+          <h3>Your next repeat starts here.</h3>
+          <p>Discover the latest tracks, AI-assisted music experiments, rap releases and cinematic instrumentals on our official YouTube channel.</p>
+          <a class="btn primary" href="https://youtube.com/@luvoraforlife" target="_blank" rel="noopener">Play on YouTube ↗</a>
+          <p style="font-size:11px;margin-top:18px">New releases will appear on our channel. Follow along so you don't miss the next drop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="wrap about">
+      <div><div class="kicker">About the label</div><p class="statement">Built on <span>feeling.</span><br>Driven by sound.</p></div>
+      <div class="about-copy">LUVORA PRODUCTION is an independent music brand exploring the space between modern rap, Punjabi energy, AI-assisted music creation and cinematic sound. Our goal is simple: create music for every mood, every ambition and every moment that deserves a soundtrack.<br><br>Follow our journey as the sound grows.</div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="wrap contact">
+      <div class="kicker">Stay connected</div>
+      <h2>Keep the sound close.</h2>
+      <p>Follow Luvora Production for new music, fresh drops and upcoming releases.</p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn primary" href="https://youtube.com/@luvoraforlife" target="_blank" rel="noopener">YouTube channel ↗</a>
+        <a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><div>© <span id="year"></span> LUVORA PRODUCTION. ALL RIGHTS RESERVED.</div><div class="social"><a href="#home">BACK TO TOP ↑</a></div></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
